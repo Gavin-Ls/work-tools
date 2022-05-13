@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Heiti SC</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>云企服务管理系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/root/DiVTAnFBWTZFfRV.png</normaloff>:/root/DiVTAnFBWTZFfRV.png</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>150</y>
+      <width>291</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Heiti SC'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.AppleSystemUIFont';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="font">
+     <font>
+      <family>Heiti SC</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <widget class="QMenu" name="menu_2">
+     <property name="font">
+      <font>
+       <family>Heiti SC</family>
+      </font>
+     </property>
+     <property name="title">
+      <string>风格</string>
+     </property>
+     <addaction name="actionMacOS"/>
+     <addaction name="actionWindows"/>
+     <addaction name="actionFusion"/>
+    </widget>
+    <addaction name="menu_2"/>
+    <addaction name="separator"/>
+    <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="font">
+     <font>
+      <family>Heiti SC</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="action_4"/>
+    <addaction name="action_5"/>
+    <addaction name="action_6"/>
+    <addaction name="action_7"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="font">
+     <font>
+      <family>Heiti SC</family>
+     </font>
+    </property>
+    <property name="title">
+     <string>系统</string>
+    </property>
+    <addaction name="action_exit_warn"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
+   </widget>
+   <addaction name="menu_4"/>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionMacOS">
+   <property name="text">
+    <string>MacOS</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionWindows">
+   <property name="text">
+    <string>Windows</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="actionFusion">
+   <property name="text">
+    <string>Fusion</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>云企切换</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>操作手册</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>注册</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>联系我们</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>关于我们</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/root/resources/image/exit_1.svg</normaloff>:/root/resources/image/exit_1.svg</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="action_exit_warn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/root/resources/image/bell_1.svg</normaloff>:/root/resources/image/bell_1.svg</iconset>
+   </property>
+   <property name="text">
+    <string>退出时发出警告</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>Heiti SC</family>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

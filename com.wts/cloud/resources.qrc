@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="root">
+    <file>resources/image/bell_1.svg</file>
+    <file>resources/image/warn_1.svg</file>
+    <file>resources/image/warn_2.svg</file>
+    <file>resources/image/warn_3.svg</file>
+    <file>resources/image/warn_4.svg</file>
+    <file>resources/image/warn_5.svg</file>
+    <file>resources/image/warn_6.svg</file>
+    <file>resources/image/warn_7.svg</file>
+    <file>resources/image/exit_1.svg</file>
+    <file>resources/image/exit_2.svg</file>
+    <file>resources/image/color-error.svg</file>
+    <file>resources/image/correct_1.svg</file>
+    <file>resources/image/correct_2.svg</file>
+    <file>resources/image/correct_3.svg</file>
+    <file>resources/image/correct_4.svg</file>
+    <file>resources/image/correct_5.svg</file>
+    <file>resources/image/correct_sure_1.svg</file>
+    <file>resources/image/correct_sure_2.svg</file>
+    <file>resources/image/error_1.svg</file>
+    <file>resources/image/error_2.svg</file>
+    <file>resources/image/error_3.svg</file>
+    <file>resources/image/error_4.svg</file>
+    <file>resources/image/error_5.svg</file>
+    <file>resources/image/title_main.png</file>
+    <file>resources/image/close_1.svg</file>
+    <file>resources/image/close_2.svg</file>
+    <file>resources/image/close_3.svg</file>
+  </qresource>
+</RCC>
