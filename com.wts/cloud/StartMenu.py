@@ -1,11 +1,11 @@
-from PySide6.QtCore import Slot, Qt
-from PySide6.QtWidgets import QMainWindow, QDialog, QStyleFactory
+from PySide6.QtCore import Qt, Slot
+from PySide6.QtWidgets import QDialog, QMainWindow, QStyleFactory
 
-from Operate_ShouCe import Ui_Dialog as Operate_ShouCe_Ui_Dialog
-from YunQi_MainWindow import Ui_MainWindow
-from about_me import Ui_Dialog as About_me_Ui_Dialog
-from contact_us import Ui_Dialog as Contact_us_Ui_Dialog
-from register import Ui_Dialog as Register_Ui_Dialog
+from ui.about_me import Ui_Dialog as About_me_Ui_Dialog
+from ui.contact_us import Ui_Dialog as Contact_us_Ui_Dialog
+from ui.Operate_ShouCe import Ui_Dialog as Operate_ShouCe_Ui_Dialog
+from ui.register import Ui_Dialog as Register_Ui_Dialog
+from ui.YunQi_MainWindow import Ui_MainWindow
 
 
 class StartMainMenu(QMainWindow):

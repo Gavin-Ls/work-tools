@@ -4,6 +4,7 @@ import sys
 from PySide6.QtWidgets import QApplication
 
 sys.path.append('cloud')
+sys.path.append('cloud/ui')
 sys.path.append('utils')
 
 
