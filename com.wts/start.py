@@ -2,7 +2,8 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from StartMenu import StartMainMenu
+sys.path.append('cloud')
+from cloud.StartMenu import StartMainMenu
 
 
 class MainStart:
