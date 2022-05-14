@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'Operate_ShouCe.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.2.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -53,9 +53,14 @@ class Ui_Dialog(object):
 
         self.pushButton = QPushButton(Dialog)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(45, 45))
-        self.pushButton.setMaximumSize(QSize(45, 45))
-        self.pushButton.setStyleSheet(u"border-image: url(:/root/resources/image/close_3.svg);")
+        self.pushButton.setMinimumSize(QSize(60, 30))
+        self.pushButton.setMaximumSize(QSize(60, 30))
+        self.pushButton.setFont(font)
+        self.pushButton.setStyleSheet(u"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(237, 208, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.267045 rgba(239, 206, 55, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:1 rgba(235, 213, 26, 255));")
+        icon1 = QIcon()
+        icon1.addFile(u":/close/resources/image/close_2.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon1)
+        self.pushButton.setIconSize(QSize(20, 20))
 
         self.horizontalLayout.addWidget(self.pushButton)
 
@@ -78,25 +83,24 @@ class Ui_Dialog(object):
         self.textBrowser_Operate_ShouCe.setHtml(QCoreApplication.translate("Dialog", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><title>\u64cd\u4f5c\u624b\u518c</title><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"</style></head><body style=\" font-family:'.AppleSystemUIFont'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
+"</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-size:18pt; font-weight:700;\">\u529f\u80fd\u4ecb\u7ecd\uff1a</span></p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:18pt; font-weight:700;\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:"
-                        "0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">1\u3001</span><span style=\" font-family:'Heiti SC';\">\u8bbe\u7f6e-&gt;\u98ce\u683c\u8bbe\u7f6e</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">2\u3001</span><span style=\" font-family:'Heiti SC';\">\u8bbe\u7f6e-&gt;\u4e91\u4f01\u5207\u6362</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">3\u3001<"
-                        "/span><span style=\" font-family:'Heiti SC';\">\u5e2e\u52a9-&gt;\u64cd\u4f5c\u624b\u518c</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">4\u3001</span><span style=\" font-family:'Heiti SC';\">\u5e2e\u52a9-&gt;\u6ce8\u518c</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">5\u3001</span><span style=\" font-family:'Heiti SC';\">\u5e2e\u52a9-&gt;\u8054\u7cfb\u6211\u4eec"
-                        "</span></p>\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC';\"><br /></p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-weight:700;\">6\u3001</span><span style=\" font-family:'Heiti SC';\">\u5e2e\u52a9-&gt;\u5173\u4e8e\u6211\u4eec</span></p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti S"
+                        "C'; font-size:13pt; font-weight:700;\">1\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u8bbe\u7f6e-&gt;\u98ce\u683c\u8bbe\u7f6e</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:13pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-size:13pt; font-weight:700;\">2\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u8bbe\u7f6e-&gt;\u4e91\u4f01\u5207\u6362</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:13pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style="
+                        "\" font-family:'Heiti SC'; font-size:13pt; font-weight:700;\">3\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u5e2e\u52a9-&gt;\u64cd\u4f5c\u624b\u518c</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:13pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-size:13pt; font-weight:700;\">4\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u5e2e\u52a9-&gt;\u6ce8\u518c</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:13pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><"
+                        "span style=\" font-family:'Heiti SC'; font-size:13pt; font-weight:700;\">5\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u5e2e\u52a9-&gt;\u8054\u7cfb\u6211\u4eec</span></p>\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Heiti SC'; font-size:13pt;\"><br /></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Heiti SC'; font-size:13pt; font-weight:700;\">6\u3001</span><span style=\" font-family:'Heiti SC'; font-size:13pt;\">\u5e2e\u52a9-&gt;\u5173\u4e8e\u6211\u4eec</span></p></body></html>", None))
         self.textBrowser_Operate_ShouCe.setPlaceholderText(QCoreApplication.translate("Dialog", u"\u529f\u80fd\u4ecb\u7ecd", None))
-        self.pushButton.setText("")
+        self.pushButton.setText(QCoreApplication.translate("Dialog", u"\u5173\u95ed", None))
     # retranslateUi
 

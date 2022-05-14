@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'YunQi_MainWindow.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.2.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -17,7 +17,8 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
 from PySide6.QtWidgets import (QApplication, QMainWindow, QMenu, QMenuBar,
-    QSizePolicy, QStatusBar, QTextEdit, QWidget)
+    QPushButton, QSizePolicy, QStatusBar, QTextEdit,
+    QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -59,7 +60,7 @@ class Ui_MainWindow(object):
         self.action_exit = QAction(MainWindow)
         self.action_exit.setObjectName(u"action_exit")
         icon1 = QIcon()
-        icon1.addFile(u":/root/resources/image/exit_1.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u":/exit/resources/image/exit_1.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.action_exit.setIcon(icon1)
         self.action_exit.setFont(font)
         self.action_exit.setMenuRole(QAction.QuitRole)
@@ -68,7 +69,7 @@ class Ui_MainWindow(object):
         self.action_exit_warn.setCheckable(True)
         self.action_exit_warn.setChecked(True)
         icon2 = QIcon()
-        icon2.addFile(u":/root/resources/image/bell_1.svg", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u":/bell/resources/image/bell_1.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.action_exit_warn.setIcon(icon2)
         self.action_exit_warn.setFont(font)
         self.centralwidget = QWidget(MainWindow)
@@ -76,10 +77,18 @@ class Ui_MainWindow(object):
         self.textEdit = QTextEdit(self.centralwidget)
         self.textEdit.setObjectName(u"textEdit")
         self.textEdit.setGeometry(QRect(240, 150, 291, 261))
+        self.pushButton = QPushButton(self.centralwidget)
+        self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setGeometry(QRect(90, 220, 75, 24))
+        icon3 = QIcon()
+        icon3.addFile(u":/correct/resources/image/correct_sure_1.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon3)
+        self.pushButton.setIconSize(QSize(16, 16))
+        self.pushButton.setCheckable(True)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 24))
+        self.menubar.setGeometry(QRect(0, 0, 800, 18))
         self.menu = QMenu(self.menubar)
         self.menu.setObjectName(u"menu")
         self.menu.setFont(font)
@@ -134,9 +143,9 @@ class Ui_MainWindow(object):
         self.textEdit.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"</style></head><body style=\" font-family:'Heiti SC'; font-size:13pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.AppleSystemUIFont';\"><br /></p></body></html>", None))
+"</style></head><body style=\" font-family:'Heiti SC'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.AppleSystemUIFont'; font-size:13pt;\"><br /></p></body></html>", None))
+        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u786e\u5b9a", None))
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\u8bbe\u7f6e", None))
         self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\u98ce\u683c", None))
         self.menu_3.setTitle(QCoreApplication.translate("MainWindow", u"\u5e2e\u52a9", None))

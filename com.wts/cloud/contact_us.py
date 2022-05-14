@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'contact_us.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.2.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -121,9 +121,13 @@ class Ui_Dialog(object):
 
         self.pushButton = QPushButton(Dialog)
         self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(45, 45))
-        self.pushButton.setMaximumSize(QSize(45, 45))
-        self.pushButton.setStyleSheet(u"border-image: url(:/root/resources/image/close_3.svg);")
+        self.pushButton.setMinimumSize(QSize(60, 30))
+        self.pushButton.setMaximumSize(QSize(60, 30))
+        self.pushButton.setStyleSheet(u"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(237, 208, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.267045 rgba(239, 206, 55, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:1 rgba(235, 213, 26, 255));")
+        icon1 = QIcon()
+        icon1.addFile(u":/close/resources/image/close_2.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton.setIcon(icon1)
+        self.pushButton.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_5.addWidget(self.pushButton)
 
@@ -159,6 +163,6 @@ class Ui_Dialog(object):
         self.label_6.setText(QCoreApplication.translate("Dialog", u"123456789", None))
         self.label_7.setText(QCoreApplication.translate("Dialog", u"123456789@163.com", None))
         self.label_8.setText(QCoreApplication.translate("Dialog", u"\u4e0a\u6d77", None))
-        self.pushButton.setText("")
+        self.pushButton.setText(QCoreApplication.translate("Dialog", u"\u5173\u95ed", None))
     # retranslateUi
 

@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'about_me.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.3.0
+## Created by: Qt User Interface Compiler version 6.2.3
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -109,10 +109,14 @@ class Ui_Dialog(object):
 
         self.pushButton_about_me = QPushButton(Dialog)
         self.pushButton_about_me.setObjectName(u"pushButton_about_me")
-        self.pushButton_about_me.setMinimumSize(QSize(45, 45))
-        self.pushButton_about_me.setMaximumSize(QSize(45, 45))
+        self.pushButton_about_me.setMinimumSize(QSize(60, 30))
+        self.pushButton_about_me.setMaximumSize(QSize(60, 30))
         self.pushButton_about_me.setFont(font1)
-        self.pushButton_about_me.setStyleSheet(u"border-image: url(:/root/resources/image/close_3.svg);")
+        self.pushButton_about_me.setStyleSheet(u"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(237, 208, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.267045 rgba(239, 206, 55, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:1 rgba(235, 213, 26, 255));")
+        icon1 = QIcon()
+        icon1.addFile(u":/close/resources/image/close_2.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_about_me.setIcon(icon1)
+        self.pushButton_about_me.setIconSize(QSize(20, 20))
 
         self.horizontalLayout_2.addWidget(self.pushButton_about_me)
 
@@ -143,6 +147,6 @@ class Ui_Dialog(object):
         self.label_5.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:14pt; font-weight:700;\">\u7248\u672c\uff1a</span><span style=\" color:#575757;\">V1.0</span></p></body></html>", None))
         self.label_4.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:14pt; font-weight:700;\">\u5f00\u53d1\u65f6\u95f4\uff1a</span><span style=\" color:#575757;\">2022/5/10</span></p></body></html>", None))
         self.label_6.setText(QCoreApplication.translate("Dialog", u"<html><head/><body><p><span style=\" font-size:14pt; font-weight:700;\">\u7248\u6743\uff1a</span><span style=\" color:#575757;\">\u53ef\u514d\u8d39\u8bd5\u7528\uff0c\u5982\u9700\u957f\u671f\u4f7f\u7528\uff0c\u8bf7\u8054\u7cfb\u4f5c\u8005</span></p></body></html>", None))
-        self.pushButton_about_me.setText("")
+        self.pushButton_about_me.setText(QCoreApplication.translate("Dialog", u"\u5173\u95ed", None))
     # retranslateUi
 
