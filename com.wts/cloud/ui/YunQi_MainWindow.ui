@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>716</width>
+    <height>545</height>
    </rect>
   </property>
   <property name="font">
@@ -19,8 +19,8 @@
    <string>云企服务管理系统</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/root/DiVTAnFBWTZFfRV.png</normaloff>:/root/DiVTAnFBWTZFfRV.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/root/resources/image/title_main.png</normaloff>:/root/resources/image/title_main.png</iconset>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
@@ -123,7 +123,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>716</width>
      <height>18</height>
     </rect>
    </property>
@@ -187,7 +187,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionMacOS">
    <property name="text">
-    <string>MacOS</string>
+    <string>WindowVista</string>
    </property>
    <property name="font">
     <font>

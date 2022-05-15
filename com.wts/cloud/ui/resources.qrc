@@ -3,12 +3,12 @@
     <file>resources/image/title_main.png</file>
   </qresource>
   <qresource prefix="error">
-    <file>resources/image/color-error.svg</file>
     <file>resources/image/error_1.svg</file>
     <file>resources/image/error_2.svg</file>
     <file>resources/image/error_3.svg</file>
     <file>resources/image/error_4.svg</file>
     <file>resources/image/error_5.svg</file>
+    <file>resources/image/error_6.svg</file>
   </qresource>
   <qresource prefix="correct">
     <file>resources/image/correct_1.svg</file>

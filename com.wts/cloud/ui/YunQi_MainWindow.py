@@ -8,24 +8,29 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,
-                            QSize)
-from PySide6.QtGui import (QAction, QFont, QIcon)
-from PySide6.QtWidgets import (QMenu, QMenuBar,
-                               QPushButton, QStatusBar, QTextEdit,
-                               QWidget)
-
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
+    QCursor, QFont, QFontDatabase, QGradient,
+    QIcon, QImage, QKeySequence, QLinearGradient,
+    QPainter, QPalette, QPixmap, QRadialGradient,
+    QTransform)
+from PySide6.QtWidgets import (QApplication, QCommandLinkButton, QFontComboBox, QMainWindow,
+    QMenu, QMenuBar, QPushButton, QSizePolicy,
+    QStatusBar, QTextEdit, QToolButton, QWidget)
+import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 600)
+        MainWindow.resize(716, 545)
         font = QFont()
         font.setFamilies([u"Heiti SC"])
         MainWindow.setFont(font)
         icon = QIcon()
-        icon.addFile(u":/root/DiVTAnFBWTZFfRV.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/root/resources/image/title_main.png", QSize(), QIcon.Normal, QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setWindowOpacity(1.000000000000000)
         self.actionMacOS = QAction(MainWindow)
@@ -80,10 +85,23 @@ class Ui_MainWindow(object):
         self.pushButton.setIcon(icon3)
         self.pushButton.setIconSize(QSize(16, 16))
         self.pushButton.setCheckable(True)
+        self.toolButton = QToolButton(self.centralwidget)
+        self.toolButton.setObjectName(u"toolButton")
+        self.toolButton.setGeometry(QRect(80, 290, 91, 41))
+        self.toolButton.setPopupMode(QToolButton.DelayedPopup)
+        self.toolButton.setToolButtonStyle(Qt.ToolButtonTextUnderIcon)
+        self.toolButton.setAutoRaise(False)
+        self.toolButton.setArrowType(Qt.DownArrow)
+        self.commandLinkButton = QCommandLinkButton(self.centralwidget)
+        self.commandLinkButton.setObjectName(u"commandLinkButton")
+        self.commandLinkButton.setGeometry(QRect(100, 100, 186, 41))
+        self.fontComboBox = QFontComboBox(self.centralwidget)
+        self.fontComboBox.setObjectName(u"fontComboBox")
+        self.fontComboBox.setGeometry(QRect(50, 420, 224, 22))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 18))
+        self.menubar.setGeometry(QRect(0, 0, 716, 18))
         self.menu = QMenu(self.menubar)
         self.menu.setObjectName(u"menu")
         self.menu.setFont(font)
@@ -125,7 +143,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u4e91\u4f01\u670d\u52a1\u7ba1\u7406\u7cfb\u7edf", None))
-        self.actionMacOS.setText(QCoreApplication.translate("MainWindow", u"MacOS", None))
+        self.actionMacOS.setText(QCoreApplication.translate("MainWindow", u"WindowVista", None))
         self.actionWindows.setText(QCoreApplication.translate("MainWindow", u"Windows", None))
         self.actionFusion.setText(QCoreApplication.translate("MainWindow", u"Fusion", None))
         self.action_3.setText(QCoreApplication.translate("MainWindow", u"\u4e91\u4f01\u5207\u6362", None))
@@ -141,6 +159,8 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Heiti SC'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.AppleSystemUIFont'; font-size:13pt;\"><br /></p></body></html>", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u786e\u5b9a", None))
+        self.toolButton.setText(QCoreApplication.translate("MainWindow", u"\u6309\u94ae", None))
+        self.commandLinkButton.setText(QCoreApplication.translate("MainWindow", u"CommandLinkButton", None))
         self.menu.setTitle(QCoreApplication.translate("MainWindow", u"\u8bbe\u7f6e", None))
         self.menu_2.setTitle(QCoreApplication.translate("MainWindow", u"\u98ce\u683c", None))
         self.menu_3.setTitle(QCoreApplication.translate("MainWindow", u"\u5e2e\u52a9", None))
