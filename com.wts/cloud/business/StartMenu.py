@@ -1,11 +1,11 @@
 from PySide6.QtCore import Qt, Slot
 from PySide6.QtWidgets import QDialog, QMainWindow, QStyleFactory
 
-from ui.about_me import Ui_Dialog as About_me_Ui_Dialog
-from ui.contact_us import Ui_Dialog as Contact_us_Ui_Dialog
-from ui.Operate_ShouCe import Ui_Dialog as Operate_ShouCe_Ui_Dialog
-from ui.register import Ui_Dialog as Register_Ui_Dialog
-from ui.YunQi_MainWindow import Ui_MainWindow
+from ..ui.about_me import Ui_Dialog as About_me_Ui_Dialog
+from ..ui.contact_us import Ui_Dialog as Contact_us_Ui_Dialog
+from ..ui.Operate_ShouCe import Ui_Dialog as Operate_ShouCe_Ui_Dialog
+from ..ui.register import Ui_Dialog as Register_Ui_Dialog
+from ..ui.YunQi_MainWindow import Ui_MainWindow
 
 
 class StartMainMenu(QMainWindow):
@@ -15,15 +15,17 @@ class StartMainMenu(QMainWindow):
         self.ui_main_window = Ui_MainWindow()
         self.ui_main_window.setupUi(self)
 
+        self.app = app
+
         # 退出系统
-        self.ui_main_window.action_exit.triggered.connect(self.exit_sys)
+        self.ui_main_window.action_exit.triggered.connect(self.app.exit)
 
         # 切换到MacOS风格
-        self.ui_main_window.actionMacOS.triggered.connect(self.to_macos)
+        self.ui_main_window.actionMacOS.triggered.connect(self.change_to_windows_vista)
         # 切换到Windows风格
-        self.ui_main_window.actionWindows.triggered.connect(self.to_windows)
+        self.ui_main_window.actionWindows.triggered.connect(self.change_to_window)
         # 切换到Fusion风格
-        self.ui_main_window.actionFusion.triggered.connect(self.to_fusion)
+        self.ui_main_window.actionFusion.triggered.connect(self.change_to_fusion)
 
         # 操作手册
         self.ui_main_window.action_7.triggered.connect(self.about_me)
@@ -34,15 +36,17 @@ class StartMainMenu(QMainWindow):
         # 关于我们
         self.ui_main_window.action_4.triggered.connect(self.operate_shou_ce)
 
-        self.app = app
+    @Slot()
+    def change_to_windows_vista(self):
+        self.app.setStyle(QStyleFactory.create("WindowsVista"))
 
     @Slot()
-    def exit_sys(self):
-        """
-        退出系统
-        :return:
-        """
-        self.app.exit()
+    def change_to_window(self):
+        self.app.setStyle(QStyleFactory.create("Windows"))
+
+    @Slot()
+    def change_to_fusion(self):
+        self.app.setStyle(QStyleFactory.create("Fusion"))
 
     @Slot()
     def register_page(self):
@@ -58,7 +62,8 @@ class StartMainMenu(QMainWindow):
         register.pushButton.clicked.connect(self.register_close)
         register.pushButton_2.clicked.connect(lambda: self.register_save(dialog=dialog))
         # 直接隐藏界面整个头部内容
-        dialog.setWindowFlags(Qt.FramelessWindowHint)
+        # dialog.setWindowFlags(Qt.FramelessWindowHint)
+        dialog.setWindowFlags(Qt.WindowCloseButtonHint)
         dialog.exec()
 
     @Slot()
@@ -89,19 +94,10 @@ class StartMainMenu(QMainWindow):
         contact_us.setupUi(dialog)
         # 关于我们窗口关闭(以下2中槽传参样例)
         # about.pushButton_about_me.clicked.connect(functools.partial(self.about_me_close, dialog_about))
-        contact_us.pushButton.clicked.connect(lambda: self.contact_us_close(dialog=dialog))
+        contact_us.pushButton.clicked.connect(dialog.close)
         # 直接隐藏界面整个头部内容
-        dialog.setWindowFlags(Qt.FramelessWindowHint)
+        dialog.setWindowFlags(Qt.WindowCloseButtonHint)
         dialog.exec()
-
-    @Slot()
-    def contact_us_close(self, dialog):
-        """
-        关闭联系我们
-        :param dialog:
-        :return:
-        """
-        dialog.close()
 
     @Slot()
     def operate_shou_ce(self):
@@ -114,19 +110,10 @@ class StartMainMenu(QMainWindow):
         operate_shou_ce.setupUi(dialog)
         # 关于我们窗口关闭(以下2中槽传参样例)
         # about.pushButton_about_me.clicked.connect(functools.partial(self.about_me_close, dialog_about))
-        operate_shou_ce.pushButton.clicked.connect(lambda: self.operate_shou_ce_close(dialog=dialog))
+        operate_shou_ce.pushButton.clicked.connect(dialog.close)
         # 直接隐藏界面整个头部内容
-        dialog.setWindowFlags(Qt.FramelessWindowHint)
+        dialog.setWindowFlags(Qt.WindowCloseButtonHint)
         dialog.exec()
-
-    @Slot()
-    def operate_shou_ce_close(self, dialog):
-        """
-        关闭操作手册
-        :param dialog:
-        :return:
-        """
-        dialog.close()
 
     @Slot()
     def about_me(self):
@@ -139,28 +126,7 @@ class StartMainMenu(QMainWindow):
         about.setupUi(dialog_about)
         # 关于我们窗口关闭(以下2中槽传参样例)
         # about.pushButton_about_me.clicked.connect(functools.partial(self.about_me_close, dialog_about))
-        about.pushButton_about_me.clicked.connect(lambda: self.about_me_close(dialog_about=dialog_about))
+        about.pushButton_about_me.clicked.connect(dialog_about.close)
         # 直接隐藏界面整个头部内容
-        dialog_about.setWindowFlags(Qt.FramelessWindowHint)
+        dialog_about.setWindowFlags(Qt.WindowCloseButtonHint)
         dialog_about.exec()
-
-    @Slot()
-    def about_me_close(self, dialog_about):
-        """
-        关闭关于我们
-        :param dialog_about:
-        :return:
-        """
-        dialog_about.close()
-
-    @Slot()
-    def to_macos(self):
-        self.app.setStyle(QStyleFactory.create("MacOS"))
-
-    @Slot()
-    def to_windows(self):
-        self.app.setStyle(QStyleFactory.create("Windows"))
-
-    @Slot()
-    def to_fusion(self):
-        self.app.setStyle(QStyleFactory.create("Fusion"))

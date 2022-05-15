@@ -4,7 +4,7 @@
 
 # 语言
 
-Python3.10
+Python3版本
 
 # 安装插件
 
@@ -12,4 +12,5 @@ Python3.10
 pip install PySide6
 pip install sqlite3
 pip install rsa
+pip install pycrypto
 ```

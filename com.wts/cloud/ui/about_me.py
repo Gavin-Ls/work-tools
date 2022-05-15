@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (QApplication, QDialog, QHBoxLayout, QLabel,
     QPushButton, QSizePolicy, QSpacerItem, QVBoxLayout,
     QWidget)
 import resources_rc
+import resources_rc
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):

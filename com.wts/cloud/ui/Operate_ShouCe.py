@@ -31,7 +31,7 @@ class Ui_Dialog(object):
         font.setFamilies([u"Heiti SC"])
         Dialog.setFont(font)
         icon = QIcon()
-        icon.addFile(u":/root/DiVTAnFBWTZFfRV.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u":/root/resources/image/title_main.png", QSize(), QIcon.Normal, QIcon.Off)
         Dialog.setWindowIcon(icon)
         self.verticalLayout = QVBoxLayout(Dialog)
         self.verticalLayout.setObjectName(u"verticalLayout")

@@ -31,8 +31,8 @@
    <string>操作手册</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/root/DiVTAnFBWTZFfRV.png</normaloff>:/root/DiVTAnFBWTZFfRV.png</iconset>
+   <iconset resource="resources.qrc">
+    <normaloff>:/root/resources/image/title_main.png</normaloff>:/root/resources/image/title_main.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
