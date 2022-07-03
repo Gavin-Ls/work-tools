@@ -16,9 +16,9 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QCommandLinkButton, QFontComboBox, QMainWindow,
-    QMenu, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QTextEdit, QToolButton, QWidget)
+from PySide6.QtWidgets import (QApplication, QCommandLinkButton, QMainWindow, QMenu,
+    QMenuBar, QPushButton, QSizePolicy, QStatusBar,
+    QTextEdit, QToolButton, QWidget)
 import resources_rc
 
 class Ui_MainWindow(object):
@@ -95,9 +95,6 @@ class Ui_MainWindow(object):
         self.commandLinkButton = QCommandLinkButton(self.centralwidget)
         self.commandLinkButton.setObjectName(u"commandLinkButton")
         self.commandLinkButton.setGeometry(QRect(100, 100, 186, 41))
-        self.fontComboBox = QFontComboBox(self.centralwidget)
-        self.fontComboBox.setObjectName(u"fontComboBox")
-        self.fontComboBox.setGeometry(QRect(50, 420, 224, 22))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")

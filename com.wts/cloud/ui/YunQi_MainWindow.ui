@@ -107,16 +107,6 @@ p, li { white-space: pre-wrap; }
      <string>CommandLinkButton</string>
     </property>
    </widget>
-   <widget class="QFontComboBox" name="fontComboBox">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>420</y>
-      <width>224</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
