@@ -14,3 +14,11 @@ pip install sqlite3
 pip install rsa
 pip install pycrypto
 ```
+
+# 功能描述
+- 域名解析管理
+    - 域名解析列表
+    - 域名解析新增
+    - 域名解析修改
+- 安全组管理
+    - 安全组列表
