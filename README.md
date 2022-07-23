@@ -23,3 +23,4 @@ pip install pycrypto
       - 域名解析修改
   - 安全组管理
       - 安全组列表
+      - 安全组添加
