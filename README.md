@@ -26,3 +26,5 @@ pip install pycrypto
       - 安全组列表
       - 安全组添加
       - 安全组编辑
+  - ECS服务器
+      - ECS列表
