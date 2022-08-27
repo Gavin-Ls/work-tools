@@ -28,3 +28,4 @@ pip install pycrypto
       - 安全组编辑
   - ECS服务器
       - ECS列表
+      - ECS基础信息详情
