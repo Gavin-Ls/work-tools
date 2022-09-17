@@ -31,5 +31,5 @@ pip install pycrypto
       - ECS基础信息详情
       - ECS监控
       - ECS磁盘列表
-      - ECS磁盘详情 todo
+      - ECS磁盘详情
       - ECS磁盘监控 todo
