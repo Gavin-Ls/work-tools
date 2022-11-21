@@ -1,3 +1,5 @@
+# 目前只适合MacOS系统。Windows和Linux暂不试用
+
 # 单文件打包
 ```shell
 pyinstaller --windowed -F start.py -p init.py --noconsole
