@@ -37,6 +37,8 @@ def start_sock_turn_command(ip):
     popen(
         "ssh -f -C -N -D 127.0.0.1:{port} tomcat@{ip} -p 22 -o \"StrictHostKeyChecking no\"".
             format(port=socks_turn_port, ip=ip))
+    popen("hpts -s 127.0.0.1:{socks_port} -p {http_port}".format(socks_port=socks_turn_port,
+                                                                 http_port=http_turn_port))
 
 
 def enable_proxy_command(enable_proxy=False):
@@ -47,8 +49,11 @@ def enable_proxy_command(enable_proxy=False):
     """
     if enable_proxy:
         popen('networksetup -setsocksfirewallproxy "Wi-Fi" 127.0.0.1 {http_port}'.format(http_port=socks_turn_port))
+        popen('networksetup -setwebproxy "Wi-Fi" 127.0.0.1 {http_port}'.format(http_port=http_turn_port))
     else:
         popen('networksetup -setsocksfirewallproxystate "Wi-Fi" off')
+        popen('networksetup -setwebproxystate "Wi-Fi" off')
+        # popen('networksetup -setsecurewebproxy "Wi-Fi" off')
 
 
 def sock_to_http_turn():
@@ -56,9 +61,8 @@ def sock_to_http_turn():
     sock隧道转到http
     :return:
     """
-    popen("hpts -s 127.0.0.1:{socks_port} -p {http_port}".format(socks_port=socks_turn_port,
-                                                                 http_port=http_turn_port))
     popen('networksetup -setwebproxy "Wi-Fi" 127.0.0.1 {http_port}'.format(http_port=http_turn_port))
+    # popen('networksetup -setsecurewebproxy "Wi-Fi" 127.0.0.1 {http_port}'.format(http_port=http_turn_port))
 
 
 class MainStart(QtWidgets.QMainWindow):
@@ -181,7 +185,6 @@ class MainStart(QtWidgets.QMainWindow):
         _ip_ini_file_name = 'ip.ini'
         # 用户主目录不存在ip.ini 文件，则从软件中读取默认值。否则读取主目录中的ip.ini文件
         if _path.joinpath(_ip_ini_file_name).exists() is False:
-            logging.info("读取默认ip.ini文件")
             # 读取软件中存放的默认的ip.ini 文件
             _ip_ini = pathlib.Path(__file__).parent.resolve().joinpath(
                 'resource/{ip_file}'.format(ip_file=_ip_ini_file_name))
@@ -202,7 +205,6 @@ class MainStart(QtWidgets.QMainWindow):
             _file_ip.touch()
             _file_ip.write_text('[default]\r\nips={ips}'.format(ips=_ip_str))
         else:
-            logging.info("读取用户主目录中的ip.ini文件")
             parse = ConfigParser()
             parse.read(_path.joinpath(_ip_ini_file_name), encoding='utf-8')
             _ip_list = list(parse.get(section='default', option='ips').replace(" ", "").split(','))
@@ -250,14 +252,13 @@ class MainStart(QtWidgets.QMainWindow):
             # 自动代理标记
             proxy_flag = self.start_page.proxy_status.isChecked()
             enable_proxy_command(proxy_flag)
-            # sock_to_http_turn()
 
             self.start_page.pushButton.setText("关闭网络转发")
             self.start_page.pushButton.setStyleSheet("background-color: green")
 
             # self.append_log("启动隧道成功!")
             self.append_log("socks隧道地址[127.0.0.1:{port}]".format(port=socks_turn_port))
-            # self.append_log("http隧道地址为 127.0.0.1:{port}".format(port=http_turn_port))
+            self.append_log("http隧道地址[127.0.0.1:{port}]".format(port=http_turn_port))
 
             self.append_log("目标代理地址[{ip}:22]".format(ip=_ip))
 
@@ -277,7 +278,6 @@ class MainStart(QtWidgets.QMainWindow):
         try:
             # 关闭代理设置
             enable_proxy_command(False)
-            # popen('networksetup -setwebproxystate "Wi-Fi" off')
 
             self.start_page.pushButton.setText("开启网络转发")
             self.start_page.pushButton.setStyleSheet("background-color: red")
@@ -289,11 +289,11 @@ class MainStart(QtWidgets.QMainWindow):
                 process_id = get_process_id(cmd)
                 popen('kill -9 {0}'.format(process_id))
 
-            # ret = popen('ps aux | grep hpts | grep {port} | grep -v "grep"'.format(port=http_turn_port)).read()
-            # command_list = ret.splitlines()
-            # for cmd in command_list:
-            #     process_id = get_process_id(cmd)
-            #     popen('kill -9 {0}'.format(process_id))
+            ret = popen('ps aux | grep hpts | grep {port} | grep -v "grep"'.format(port=http_turn_port)).read()
+            command_list = ret.splitlines()
+            for cmd in command_list:
+                process_id = get_process_id(cmd)
+                popen('kill -9 {0}'.format(process_id))
 
             self.append_log("网络转发已关闭")
 

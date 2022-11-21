@@ -8,3 +8,5 @@
 /com/wts/proxy/build/
 /com/wts/proxy/dist/
 /com/wts/proxy/resource/favicon.icns
+/com/wts/proxy/start多文件打包.spec
+/com/wts/proxy/start单文件打包.spec
