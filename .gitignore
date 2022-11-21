@@ -1,3 +1,10 @@
 /.idea/
 /.vscode/
 /com.wts/cloud/__pycache__/
+/com/wts/proxy/Test.py
+/com/wts/proxy/resource/ip.ini
+/com/wts/proxy/start.spec
+/venv/
+/com/wts/proxy/build/
+/com/wts/proxy/dist/
+/com/wts/proxy/resource/favicon.icns
