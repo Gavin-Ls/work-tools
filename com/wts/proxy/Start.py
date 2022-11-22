@@ -178,8 +178,9 @@ class MainStart(QtWidgets.QMainWindow):
         # 从项目中读取IP地址列表
         """
         ip.ini 文件格式如下：
+        
         [default]
-        ips = ['IP1','IP2']
+        ips=IP1,IP2
         """
         # 存放IP的文件
         _ip_ini_file_name = 'ip.ini'
